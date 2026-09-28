@@ -7,6 +7,7 @@
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomePage.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BNLSouthAfrica.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </nav>
+        @RenderSection("Styles", required: false)
     </header>
     <div class="container">
         <main role="main" class="pb-3">

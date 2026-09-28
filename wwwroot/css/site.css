@@ -1,3 +1,123 @@
+:root {
+    --brand-red: #D22630;
+    --brand-red-hover: #B71E27;
+    --brand-red-active: #9A1921;
+    --brand-red-tint: #FBEAEB;
+    --brand-maroon: #5C2427;
+    --brand-maroon-hover: #47191C;
+    --brand-maroon-active: #351214;
+    --brand-warm-red: #F9423A;
+    --brand-orange: #FF8200;
+    --brand-black: #2D2926;
+    --neutral-0: #FFFFFF;
+    --neutral-50: #F7F5F3;
+    --neutral-100: #F0EDEA;
+    --neutral-200: #E2DEDA;
+    --neutral-300: #C4BFBA;
+    --neutral-400: #9B958F;
+    --neutral-500: #6E6762;
+    --neutral-700: #4A4441;
+    --neutral-900: #2D2926;
+    --neutral-950: #1A1715;
+    --status-live: #16A34A;
+    --status-live-tint: #E8F6EE;
+    --status-upcoming: var(--neutral-500);
+    --status-final: var(--neutral-900);
+    --status-win: #15803D;
+    --status-loss: var(--neutral-500);
+    --status-success: #15803D;
+    --status-success-tint: #E8F6EE;
+    --status-error: #5C2427;
+    --status-error-tint: #F6EBEC;
+    --status-warning: #B45309;
+    --status-warning-tint: #FDF3E7;
+    --status-info: #1D4ED8;
+    --status-info-tint: #EAEFFC;
+    --surface-page: var(--neutral-0);
+    --surface-subtle: var(--neutral-50);
+    --surface-card: var(--neutral-0);
+    --surface-raised: var(--neutral-100);
+    --surface-disabled: var(--neutral-100);
+    --surface-inverse: var(--brand-maroon);
+    --surface-inverse-alt: var(--neutral-950);
+    --surface-brand: var(--brand-red);
+    --surface-selected: var(--brand-red-tint);
+    --surface-scrim: rgba(26, 23, 21, .56);
+    --text-heading: var(--neutral-950);
+    --text-numeral: var(--neutral-950);
+    --text-primary: var(--neutral-900);
+    --text-secondary: var(--neutral-500);
+    --text-strong-secondary: var(--neutral-700);
+    --text-tertiary: var(--neutral-400);
+    --text-disabled: var(--neutral-300);
+    --text-placeholder: var(--neutral-400);
+    --text-on-brand: var(--neutral-0);
+    --text-on-inverse: var(--neutral-0);
+    --text-on-orange: var(--neutral-950);
+    --text-link: var(--brand-red);
+    --text-link-hover: var(--brand-red-active);
+    --border-subtle: var(--neutral-100);
+    --border-default: var(--neutral-200);
+    --border-strong: var(--neutral-300);
+    --border-inverse: rgba(255, 255, 255, .22);
+    --border-brand: var(--brand-red);
+    --accent-bar: var(--brand-orange);
+    --accent-underline: var(--brand-red);
+}
+
+:root {
+    --font-core: "Jost", "Futura", "Century Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-numeric: var(--font-core);
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fs-display-xl: 56px;
+    --lh-display-xl: 60px;
+    --fs-display-l: 44px;
+    --lh-display-l: 48px;
+    --fs-h1: 36px;
+    --lh-h1: 44px;
+    --fs-h2: 28px;
+    --lh-h2: 36px;
+    --fs-h3: 22px;
+    --lh-h3: 28px;
+    --fs-h4: 18px;
+    --lh-h4: 24px;
+    --fs-body-l: 17px;
+    --lh-body-l: 26px;
+    --fs-body: 15px;
+    --lh-body: 24px;
+    --fs-small: 13px;
+    --lh-small: 20px;
+    --fs-caption: 12px;
+    --lh-caption: 16px;
+    --fs-overline: 11px;
+    --lh-overline: 16px;
+    --tracking-tight: -0.01em;
+    --tracking-normal: 0;
+    --tracking-overline: 0.08em;
+    --tracking-numeral: -0.02em;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-24: 96px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 999px;
+    --container-max: 1280px;
+    --container-pad: 24px;
+    --container-pad-mobile: 16px;
+}
+
+
 html {
   font-size: 14px;
 }
@@ -6,6 +126,29 @@ html {
   html {
     font-size: 16px;
   }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --fs-display-xl: 40px;
+        --lh-display-xl: 44px;
+        --fs-display-l: 32px;
+        --lh-display-l: 36px;
+        --fs-h1: 28px;
+        --lh-h1: 34px;
+        --fs-h2: 22px;
+        --lh-h2: 28px;
+        --fs-h3: 19px;
+        --lh-h3: 26px;
+        --fs-h4: 17px;
+        --lh-h4: 24px;
+        --fs-body-l: 16px;
+        --lh-body-l: 26px;
+        --fs-body: 15px;
+        --lh-body: 24px;
+        --fs-small: 13px;
+        --lh-small: 20px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -18,7 +161,10 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-core);
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {

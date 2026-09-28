@@ -1,8 +1,478 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    var competition = "BNLSA 2026";
+    var venue = "Johannesburg Basketball Arena";
+    var matchDate = "28 September 2026";
+
+    var matchStatus = "LIVE";
+    var matchClock = "Q3 04:32";
+    var lastUpdated = "2 minutes ago";
+
+    var homeTeam = "Johannesburg Eagles";
+    var awayTeam = "Cape Town Titans";
+    var homeScore = 68;
+    var awayScore = 61;
+
+    var featuredArticle = new
+    {
+        Category = "NEWS",
+        Title = "Squad announced for the upcoming BNLSA fixtures",
+        Standfirst = "The latest squad has been confirmed ahead of the next round of fixtures.",
+        Date = "28 September 2026"
+    };
+
+    var nextFixture = new
+    {
+        HomeTeam = "Durban Waves",
+        AwayTeam = "Pretoria Lions",
+        Date = "30 September 2026",
+        Time = "18:00",
+        Venue = "Durban Basketball Arena"
+    };
+
+    var standings = new[]
+    {
+        new { Rank = 1, Team = "Johannesburg Eagles", Played = 10, Wins = 8, Losses = 2, Percentage = ".800" },
+        new { Rank = 2, Team = "Cape Town Titans", Played = 10, Wins = 7, Losses = 3, Percentage = ".700" },
+        new { Rank = 3, Team = "Durban Waves", Played = 10, Wins = 6, Losses = 4, Percentage = ".600" },
+        new { Rank = 4, Team = "Pretoria Lions", Played = 10, Wins = 5, Losses = 5, Percentage = ".500" },
+        new { Rank = 5, Team = "Gqeberha Kings", Played = 10, Wins = 4, Losses = 6, Percentage = ".400" }
+    };
+
+    var news = new[]
+    {
+        new
+        {
+            Category = "NEWS",
+            Title = "League prepares for another exciting round",
+            Standfirst = "Teams across the competition prepare for their upcoming fixtures.",
+            Date = "28 September 2026"
+        },
+        new
+        {
+            Category = "FEATURE",
+            Title = "Inside the latest training session",
+            Standfirst = "A look at preparations ahead of the next match.",
+            Date = "27 September 2026"
+        },
+        new
+        {
+            Category = "UPDATE",
+            Title = "Match schedule confirmed",
+            Standfirst = "The latest fixtures and venues have been confirmed.",
+            Date = "26 September 2026"
+        }
+    };
+
+    var recentResults = new[]
+    {
+        new
+        {
+            HomeTeam = "Johannesburg Eagles",
+            HomeScore = 82,
+            AwayScore = 74,
+            AwayTeam = "Pretoria Lions",
+            Date = "25 September 2026"
+        },
+        new
+        {
+            HomeTeam = "Cape Town Titans",
+            HomeScore = 77,
+            AwayScore = 71,
+            AwayTeam = "Durban Waves",
+            Date = "24 September 2026"
+        },
+        new
+        {
+            HomeTeam = "Gqeberha Kings",
+            HomeScore = 68,
+            AwayScore = 73,
+            AwayTeam = "Johannesburg Eagles",
+            Date = "22 September 2026"
+        },
+        new
+        {
+            HomeTeam = "Pretoria Lions",
+            HomeScore = 80,
+            AwayScore = 76,
+            AwayTeam = "Gqeberha Kings",
+            Date = "21 September 2026"
+        }
+    };
+
+    var highlights = new[]
+    {
+        new
+        {
+            Title = "Johannesburg Eagles vs Pretoria Lions",
+            Date = "25 September 2026",
+            Length = "08:42",
+            Url = "https://www.youtube.com/"
+        },
+        new
+        {
+            Title = "Cape Town Titans vs Durban Waves",
+            Date = "24 September 2026",
+            Length = "06:18",
+            Url = "https://www.youtube.com/"
+        },
+        new
+        {
+            Title = "Top plays from the latest round",
+            Date = "22 September 2026",
+            Length = "05:36",
+            Url = "https://www.youtube.com/"
+        }
+    };
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="home-page">
+
+    <!-- LIVE MATCH -->
+
+    <section class="hm-mod">
+
+        <div class="hm-head">
+            <div>
+                <h2>Live Match</h2>
+            </div>
+
+            <a href="#" class="hm-seeall">
+                Match Centre
+            </a>
+        </div>
+
+        <div class="hm-strip">
+
+            <div class="hm-strip-text">
+                @competition
+            </div>
+
+            <div class="hm-strip-meta">
+                @matchDate · @venue
+            </div>
+
+            <div class="hm-hero-teams">
+
+                <div>
+                    <strong>@homeTeam</strong>
+                    <strong>@homeScore</strong>
+                </div>
+
+                <div>
+                    <span>@matchStatus</span>
+                    <span>@matchClock</span>
+                </div>
+
+                <div>
+                    <strong>@awayTeam</strong>
+                    <strong>@awayScore</strong>
+                </div>
+
+            </div>
+
+            <div class="hm-strip-meta">
+                Last updated @lastUpdated
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED ARTICLE -->
+
+    <section class="hm-mod">
+
+        <div class="hm-feature">
+
+            <div class="hm-media">
+                <div class="hm-media-hatch"></div>
+
+                <span class="hm-media-label">
+                    Featured article
+                </span>
+            </div>
+
+            <div>
+
+                <p class="hm-seeall">
+                    @featuredArticle.Category
+                </p>
+
+                <h1>
+                    @featuredArticle.Title
+                </h1>
+
+                <p>
+                    @featuredArticle.Standfirst
+                </p>
+
+                <p>
+                    @featuredArticle.Date
+                </p>
+
+                <a href="#" class="hm-seeall">
+                    Read more
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEXT FIXTURE -->
+
+    <section class="hm-mod">
+
+        <div class="hm-head">
+
+            <h2>Next Fixture</h2>
+
+            <a href="#" class="hm-seeall">
+                All Fixtures
+            </a>
+
+        </div>
+
+        <div class="hm-strip">
+
+            <div class="hm-strip-crests">
+                <span>@nextFixture.HomeTeam</span>
+                <span>vs</span>
+                <span>@nextFixture.AwayTeam</span>
+            </div>
+
+            <div class="hm-strip-text">
+                @nextFixture.HomeTeam vs @nextFixture.AwayTeam
+            </div>
+
+            <div class="hm-strip-meta">
+                @nextFixture.Date · @nextFixture.Time · @nextFixture.Venue
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STANDINGS -->
+
+    <section class="hm-mod">
+
+        <div class="hm-head">
+
+            <h2>Standings</h2>
+
+            <a href="#" class="hm-seeall">
+                Full Table
+            </a>
+
+        </div>
+
+        <div class="hm-grid2">
+
+            <div>
+
+                <p class="hm-strip-meta">
+                    @competition
+                </p>
+
+                <table class="st-table">
+
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Played</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>PCT</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var team in standings)
+                        {
+                            <tr>
+                                <td>@team.Rank</td>
+                                <td>@team.Team</td>
+                                <td>@team.Played</td>
+                                <td>@team.Wins</td>
+                                <td>@team.Losses</td>
+                                <td>@team.Percentage</td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWS -->
+
+    <section class="hm-mod">
+
+        <div class="hm-head">
+
+            <h2>Latest News</h2>
+
+            <a href="#" class="hm-seeall">
+                All News
+            </a>
+
+        </div>
+
+        <div class="hm-grid3">
+
+            @foreach (var article in news)
+            {
+                <article>
+
+                    <div class="hm-media">
+                        <div class="hm-media-hatch"></div>
+
+                        <span class="hm-media-label">
+                            @article.Category
+                        </span>
+                    </div>
+
+                    <div>
+                        <p class="hm-strip-meta">
+                            @article.Category
+                        </p>
+
+                        <h3>
+                            @article.Title
+                        </h3>
+
+                        <p>
+                            @article.Standfirst
+                        </p>
+
+                        <p class="hm-strip-meta">
+                            @article.Date
+                        </p>
+
+                        <a href="#" class="hm-seeall">
+                            Read more
+                        </a>
+                    </div>
+
+                </article>
+            }
+
+        </div>
+
+    </section>
+
+
+    <!-- RECENT RESULTS -->
+
+    <section class="hm-mod">
+
+        <div class="hm-head">
+
+            <h2>Recent Results</h2>
+
+            <a href="#" class="hm-seeall">
+                All Results
+            </a>
+
+        </div>
+
+        <div class="hm-grid2">
+
+            @foreach (var result in recentResults)
+            {
+                <article class="hm-strip">
+
+                    <div class="hm-strip-text">
+                        @result.HomeTeam
+                        @result.HomeScore
+                        -
+                        @result.AwayScore
+                        @result.AwayTeam
+                    </div>
+
+                    <div class="hm-strip-meta">
+                        @result.Date
+                    </div>
+
+                    <a href="#" class="hm-seeall">
+                        Match Details
+                    </a>
+
+                </article>
+            }
+
+        </div>
+
+    </section>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <section class="hm-mod">
+
+        <div class="hm-head">
+
+            <h2>Highlights</h2>
+
+            <a href="#" class="hm-seeall">
+                All Highlights
+            </a>
+
+        </div>
+
+        <div class="hm-scroll">
+
+            @foreach (var highlight in highlights)
+            {
+                <a class="hm-hlcard"
+                   href="@highlight.Url"
+                   target="_blank"
+                   rel="noopener">
+
+                    <div class="hm-hlmedia">
+
+                        <div class="hm-hlplay">
+                            <span>▶</span>
+                        </div>
+
+                        <div class="hm-hllen">
+                            @highlight.Length
+                        </div>
+
+                    </div>
+
+                    <div class="hm-hlbody">
+
+                        <h3 class="hm-hltitle">
+                            @highlight.Title
+                        </h3>
+
+                        <span class="hm-strip-meta">
+                            @highlight.Date
+                        </span>
+
+                    </div>
+
+                </a>
+            }
+
+        </div>
+
+    </section>
+
 </div>

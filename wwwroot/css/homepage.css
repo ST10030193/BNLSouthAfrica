@@ -1,0 +1,218 @@
+﻿/* ── Homepage ──────────────────────────────────────────────────────────────── */
+
+.hm-mod {
+    margin-top: 64px;
+}
+
+.hm-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-default);
+}
+
+    .hm-head h2 {
+        font-size: var(--fs-h3);
+        line-height: var(--lh-h3);
+    }
+
+.hm-seeall {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-semibold);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.hm-strip {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 14px 18px;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+    .hm-strip:hover {
+        border-color: var(--neutral-400);
+    }
+
+.hm-strip-crests {
+    display: flex;
+    gap: 6px;
+    flex: 0 0 auto;
+}
+
+.hm-strip-text {
+    font-size: var(--fs-body);
+    color: var(--text-heading);
+    font-weight: var(--fw-semibold);
+}
+
+.hm-strip-meta {
+    font-size: var(--fs-caption);
+    color: var(--text-secondary);
+}
+
+.hm-feature {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hm-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--neutral-100);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.hm-media-hatch {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient( 135deg, var(--neutral-100) 0 10px, var(--neutral-50) 10px 20px );
+}
+
+.hm-media-label {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    font-size: var(--fs-caption);
+    color: var(--text-tertiary);
+}
+
+.hm-grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hm-grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.hm-hlcard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--surface-card);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+    .hm-hlcard:hover {
+        border-color: var(--neutral-400);
+    }
+
+        .hm-hlcard:hover .hm-hltitle {
+            color: var(--brand-red);
+        }
+
+.hm-hlmedia {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--neutral-100);
+}
+
+.hm-hlplay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .hm-hlplay span {
+        width: 46px;
+        height: 46px;
+        border-radius: var(--radius-full);
+        background: rgba(26, 23, 21, 0.56);
+        color: var(--neutral-0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.hm-hllen {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    background: rgba(26, 23, 21, 0.72);
+    color: var(--neutral-0);
+    font-size: var(--fs-caption);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.hm-hlbody {
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hm-hltitle {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-semibold);
+    color: var(--text-heading);
+    line-height: var(--lh-small);
+}
+
+.hm-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+}
+
+    .hm-scroll > * {
+        flex: 0 0 232px;
+    }
+
+.hm-hero-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 28px;
+}
+
+.pt-phone .hm-mod {
+    margin-top: 36px;
+}
+
+.pt-phone .hm-head h2 {
+    font-size: var(--fs-h4);
+}
+
+.pt-phone .hm-grid3,
+.pt-phone .hm-grid2,
+.pt-phone .hm-feature {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.hm-grid3 .bnl-pill,
+.hm-grid2 .bnl-pill {
+    white-space: nowrap;
+}
